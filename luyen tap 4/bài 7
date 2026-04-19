@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    do {
+        printf("Nhap so trong khoang 1-100: ");
+        scanf("%d", &n);
+
+        if (n < 1 || n > 100)
+            printf("Sai! Vui long nhap lai.\n");
+
+    } while (n < 1 || n > 100);
+    // do-while: chay it nhat 1 lan, lap lai neu nhap sai
+
+    printf("Ban da nhap: %d\n", n);
+    return 0;
+}

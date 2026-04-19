@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n = 1;
+
+    do {
+        if (n % 3 == 0 && n % 7 == 0) {
+            printf("So nho nhat chia het cho 3 va 7: %d\n", n);
+            break;   // thoat vong lap ngay khi tim thay
+        }
+        n++;
+    } while (1);   // lap mai mai cho den khi break
+
+    return 0;
+}
+// Ket qua: 21 (vi 21 = 3x7)

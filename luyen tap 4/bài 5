@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Nhap so: ");
+    scanf("%d", &n);
+
+    int dao = 0;
+    int tam = n;   // giu nguyen n de in sau
+
+    while (tam != 0) {
+        int chuso = tam % 10;   // lay chu so cuoi
+        dao = dao * 10 + chuso; // them vao ben phai
+        tam /= 10;              // bo chu so cuoi
+    }
+
+    printf("Dao nguoc cua %d la: %d\n", n, dao);
+    return 0;
+}

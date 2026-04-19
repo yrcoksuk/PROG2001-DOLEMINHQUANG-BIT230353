@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    printf("Nhap a: "); scanf("%d", &a);
+    printf("Nhap b: "); scanf("%d", &b);
+    printf("Nhap c: "); scanf("%d", &c);
+
+    int min;
+    if (a <= b && a <= c) {
+        min = a;
+    } else if (b <= a && b <= c) {
+        min = b;
+    } else {
+        min = c;
+    }
+
+    printf("So nho nhat la: %d\n", min);
+    return 0;
+}

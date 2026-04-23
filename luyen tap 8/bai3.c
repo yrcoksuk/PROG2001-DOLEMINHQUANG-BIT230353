@@ -1,28 +1,28 @@
+//DoLeminhQuang
 #include <stdio.h>
 
-struct Owner {
-    char ten[50];
-    int tuoi;
+struct Owner{
+char ten[50];
+int tuoi;
 };
 
-struct Car {
-    char model[50];
-    int nam;
-    struct Owner chuSoHuu;
+struct Car{
+char model[50];
+int nam;
+struct Owner chusohuu;
 };
 
-int main() {
-    struct Car xe1 = {
-        "Toyota Camry",
-        2022,
-        {"Nguyen Van E", 40}
-    };
+int main(){
+struct Car xe1={
+"porsche turbo GT",
+2025,
+{"leon",60}
+};
 
-    printf("Model : %s\n", xe1.model);
-    printf("Nam   : %d\n", xe1.nam);
-    printf("--- Chu so huu ---\n");
-    printf("Ten   : %s\n", xe1.chuSoHuu.ten);
-    printf("Tuoi  : %d\n", xe1.chuSoHuu.tuoi);
+printf("model :%s\n",xe1.model);
+printf("Nam :%d\n",xe1.nam);
+printf("ten :%s\n",xe1.chusohuu.ten);
+printf("tuoi :%d\n",xe1.chusohuu.tuoi);
 
-    return 0;
+return 0;
 }

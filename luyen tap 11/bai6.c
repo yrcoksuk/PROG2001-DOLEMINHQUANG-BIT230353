@@ -1,17 +1,16 @@
 #include <stdio.h>
 
-long long tongBinhPhuong(int n) {
-    if (n == 0)
-        return 0;
-    return (long long)n * n + tongBinhPhuong(n - 1);
+int tinhtong(int n){
+    if (n == 1)
+        return 1;
+    return n * n + tinhtong(n-1);
 }
 
-int main() {
+int main (){
     int n;
-    printf("Nhap n: ");
-    scanf("%d", &n);
-
-    long long S = tongBinhPhuong(n);
-    printf("S = 1^2 + 2^2 + ... + %d^2 = %lld\n", n, S);
+    printf("nhap n");
+    scanf("%d,&n");
+    int result = tinhtong(n);
+    printf("ket qua= %d",result);
     return 0;
-}
+    }

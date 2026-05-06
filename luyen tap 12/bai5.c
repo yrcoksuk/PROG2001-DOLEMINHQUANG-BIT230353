@@ -1,33 +1,23 @@
 #include <stdio.h>
 
-void inMang(int arr[], int size) {
-    for (int i = 0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}
-
-void sapXepGiamDan(int arr[], int size) {
-    for (int i = 0; i < size - 1; i++) {
-        for (int j = 0; j < size - 1 - i; j++) {
-            if (arr[j] < arr[j + 1]) {
-                int temp  = arr[j];
-                arr[j]    = arr[j + 1];
-                arr[j + 1] = temp;
+void sapXep(int a[], int n) {
+    for (int i = 0; i < n - 1; i++)
+        for (int j = i + 1; j < n; j++)
+            if (a[i] < a[j]) {
+                int tam = a[i];
+                a[i] = a[j];
+                a[j] = tam;
             }
-        }
-    }
 }
+
 int main() {
-    int mang[] = {5, 2, 8, 1, 9, 3, 7, 4, 6};
-    int size = sizeof(mang) / sizeof(mang[0]);
+    int a[] = {5, 2, 8, 1, 9, 3, 7, 4, 6};
+    int n = sizeof(a) / sizeof(a[0]);
 
-    printf("Truoc khi sap xep: ");
-    inMang(mang, size);
+    sapXep(a, n);
 
-    sapXepGiamDan(mang, size);
-
-    printf("Sau khi sap xep  : ");
-    inMang(mang, size);
+    printf("Mang giam dan: ");
+    for (int i = 0; i < n; i++) printf("%d ", a[i]);
 
     return 0;
 }
